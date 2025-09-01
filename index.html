@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selector RGB Moderno</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light d-flex align-items-center min-vh-100">
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-7 col-lg-6">
+        
+        <div class="card shadow-lg border-0 rounded-4">
+          <!-- Header -->
+          <div class="card-header text-center text-white py-4 bg-gradient">
+            <h2 class="mb-0">🎨 Selector de Colores RGB</h2>
+          </div>
+
+          <!-- Body -->
+          <div class="card-body p-4">
+
+            <!-- Color Picker -->
+            <div class="mb-4">
+              <label for="colorPicker" class="form-label fw-bold">Elige un color</label>
+              <input type="color" id="colorPicker" class="form-control form-control-color w-100" value="#7D7D7D">
+            </div>
+
+            <!-- Sliders + Inputs -->
+            <div class="mb-3">
+              <label for="rojo" class="form-label">Rojo</label>
+              <div class="d-flex gap-3">
+                <input type="range" class="form-range flex-grow-1" id="rojo" min="0" max="255" value="125">
+                <input type="number" class="form-control number-box" id="rojoInput" min="0" max="255" value="125">
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="verde" class="form-label">Verde</label>
+              <div class="d-flex gap-3">
+                <input type="range" class="form-range flex-grow-1" id="verde" min="0" max="255" value="125">
+                <input type="number" class="form-control number-box" id="verdeInput" min="0" max="255" value="125">
+              </div>
+            </div>
+
+            <div class="mb-4">
+              <label for="azul" class="form-label">Azul</label>
+              <div class="d-flex gap-3">
+                <input type="range" class="form-range flex-grow-1" id="azul" min="0" max="255" value="125">
+                <input type="number" class="form-control number-box" id="azulInput" min="0" max="255" value="125">
+              </div>
+            </div>
+
+            <!-- Recuadro de color -->
+            <div id="colorBox" class="color-box mx-auto mb-4"></div>
+
+            <!-- Códigos -->
+            <div class="text-center">
+              <p class="fw-bold mb-1">RGB: <span id="rgbCode" class="text-primary"></span></p>
+              <p class="fw-bold mb-0">HEX: <span id="hexCode" class="text-success"></span></p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
